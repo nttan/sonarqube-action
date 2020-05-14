@@ -33,5 +33,5 @@ sonar-scanner \
 	${SONAR_PASSWORD}
 pwd
 ls -la .
-source check.sh
+source /check.sh
 echo "Finish scan" > $GITHUB_WORKSPACE/test.log
