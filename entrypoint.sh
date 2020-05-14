@@ -16,13 +16,19 @@ else
 	SONAR_PASSWORD="${INPUT_PASSWORD}"
 fi
 
+if [[ -z "${INPUT_SONARSOURCES}" ]]; then
+	SONAR_SOURCES="."
+else
+	SONAR_SOURCES="${INPUT_SONARSOURCES}"
+fi
+
 sonar-scanner \
 	-Dsonar.host.url=${INPUT_HOST} \
 	-Dsonar.projectKey=${INPUT_PROJECTKEY} \
 	-Dsonar.projectBaseDir=${INPUT_PROJECTBASEDIR} \
 	-Dsonar.login=${INPUT_LOGIN} \
 	-Dsonar.password=${INPUT_PASSWORD} \
-	-Dsonar.sources=. \
+	-Dsonar.sources=${SONAR_SOURCES} \
 	-Dsonar.sourceEncoding=UTF-8 \
 	${SONAR_PASSWORD}
 
