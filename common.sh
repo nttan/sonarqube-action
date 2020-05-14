@@ -37,9 +37,11 @@ function sanitize_base_url {
 # that can be used to re-use these properties in a shell scripting environment.
 function read_properties {
 	if [[ "$2" == "shell" ]]; then
-		awk -f "${root:?}/readproperties.awk" -v sv=1  < "${1}"
+		#awk -f "${root:?}/readproperties.awk" -v sv=1  < "${1}"
+		awk -f "/readproperties.awk" -v sv=1  < "${1}"
 	else
-		awk -f "${root:?}/readproperties.awk" -v sv=0  < "${1}"
+		#awk -f "${root:?}/readproperties.awk" -v sv=0  < "${1}"
+		awk -f "/readproperties.awk" -v sv=0  < "${1}"
 	fi
 }
 
