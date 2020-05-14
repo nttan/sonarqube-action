@@ -34,7 +34,8 @@ sonar-scanner \
 pwd
 ls -la .
 
-if [[ "${SONAR_SOURCES}" == "public_html_src/model" ]]; then
-  echo "Failed! Please check the sonar server"
-  exit 1
-fi
+#if [[ "${SONAR_SOURCES}" == "public_html_src/model" ]]; then
+#  echo "Failed! Please check the sonar server"
+#  exit 1
+#fi
+echo "Finish scan" > test.log
