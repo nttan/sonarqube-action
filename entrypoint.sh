@@ -31,8 +31,9 @@ sonar-scanner \
 	-Dsonar.sources=${SONAR_SOURCES} \
 	-Dsonar.sourceEncoding=UTF-8 \
 	${SONAR_PASSWORD}
-RUN pwd
-RUN ls -la .
+pwd
+ls -la .
+
 if [[ "${SONAR_SOURCES}" == "public_html_src/model" ]]; then
   echo "Failed! Please check the sonar server"
   exit 1
