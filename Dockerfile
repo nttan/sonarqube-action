@@ -16,6 +16,10 @@ RUN npm config set unsafe-perm true && \
 ENV NODE_PATH "/usr/lib/node_modules/"
 
 COPY entrypoint.sh /entrypoint.sh
+COPY check.sh /check.sh
+COPY common.sh /common.sh
 RUN chmod +x /entrypoint.sh
 RUN chmod +x check.sh
+RUN chmod +x common.sh
+
 ENTRYPOINT ["/entrypoint.sh"]
