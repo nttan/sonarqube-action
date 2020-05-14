@@ -38,4 +38,4 @@ ls -la .
 #  echo "Failed! Please check the sonar server"
 #  exit 1
 #fi
-echo "Finish scan" > test.log
+echo "Finish scan" > $GITHUB_WORKSPACE/test.log
