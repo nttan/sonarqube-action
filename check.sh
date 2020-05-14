@@ -9,7 +9,7 @@ exec 1>&2 # redirect all output to stderr for logging
 #export root
 source "/common.sh"
 scanner_report_file="${GITHUB_WORKSPACE}/.scannerwork/report-task.txt"
-project_status_file="${GITHUB_WORKSPACE}./qualitygate_project_status.json"
+project_status_file="${GITHUB_WORKSPACE}/qualitygate_project_status.json"
 ce_task_info="${GITHUB_WORKSPACE}/ce_task.json"
 sonar_token="tan.nguyen.thanh:12345@Tpsxxx"
 sonar_host_url="http://113.161.53.122:9008/"
