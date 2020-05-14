@@ -14,7 +14,7 @@ RUN npm config set unsafe-perm true && \
   npm install --silent --save-dev -g typescript@3.5.2 && \
   npm config set unsafe-perm false
 ENV NODE_PATH "/usr/lib/node_modules/"
-RUN apt install -y jq
+RUN apk add jq
 
 COPY entrypoint.sh /entrypoint.sh
 COPY check.sh /check.sh
