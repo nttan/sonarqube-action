@@ -17,4 +17,6 @@ ENV NODE_PATH "/usr/lib/node_modules/"
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
+RUN chmod +x check.sh
+R
 ENTRYPOINT ["/entrypoint.sh"]
