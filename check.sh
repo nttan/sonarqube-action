@@ -7,7 +7,7 @@ exec 1>&2 # redirect all output to stderr for logging
 
 root=$(dirname "${0}" | while read -r a; do cd "${a}" && pwd && break; done)
 export root
-source "$GITHUB_WORKSPACE/common.sh"
+source "/common.sh"
 scanner_report_file="${GITHUB_WORKSPACE}/.scannerwork/report-task.txt"
 project_status_file="${GITHUB_WORKSPACE}./qualitygate_project_status.json"
 ce_task_info="${GITHUB_WORKSPACE}/ce_task.json"
