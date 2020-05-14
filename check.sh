@@ -6,8 +6,7 @@ exec 3>&1 # make stdout available as fd 3 for the result
 exec 1>&2 # redirect all output to stderr for logging
 
 #root=$(dirname "${0}" | while read -r a; do cd "${a}" && pwd && break; done)
-root=""
-export root
+#export root
 source "/common.sh"
 scanner_report_file="${GITHUB_WORKSPACE}/.scannerwork/report-task.txt"
 project_status_file="${GITHUB_WORKSPACE}./qualitygate_project_status.json"
