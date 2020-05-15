@@ -9,16 +9,16 @@ exec 1>&2 # redirect all output to stderr for logging
 #export root
 source "/common.sh"
 scanner_report_file="${GITHUB_WORKSPACE}/.scannerwork/report-task.txt"
-project_status_file="${GITHUB_WORKSPACE}/qualitygate_project_status.json"
-ce_task_info="${GITHUB_WORKSPACE}/ce_task.json"
-sonar_token="${INPUT_SONARPASS}"
+project_status_file="${GITHUB_WORKSPACE}/.github/qualitygate_project_status.json"
+ce_task_info="${GITHUB_WORKSPACE}/.github/ce_task.json"
+sonar_token="${INPUT_LOGIN}"
 sonar_host_url="${INPUT_HOST}"
-ce_error="${GITHUB_WORKSPACE}/ce_error"
+ce_error="${GITHUB_WORKSPACE}/.github/ce_error"
 ce_task_status="PENDING"
 ce_task_error=""
 attempt=0
 max_attempts=2
-
+echo "Starting check quality gate...."
 #Do until status is SUCCESS
 until [[ "${ce_task_status}" != "PENDING" ]] && [[ "${ce_task_status}" != "IN_PROGRESS" ]] && [[ -n "${ce_task_status}" ]]; do
 	attempt=$(( attempt + 1 ))
