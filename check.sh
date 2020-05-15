@@ -12,7 +12,6 @@ scanner_report_file="${GITHUB_WORKSPACE}/.scannerwork/report-task.txt"
 project_status_file="${GITHUB_WORKSPACE}/qualitygate_project_status.json"
 ce_task_info="${GITHUB_WORKSPACE}/ce_task.json"
 sonar_token="${INPUT_SONARPASS}"
-echo ${sonar_token}
 sonar_host_url="${INPUT_HOST}"
 ce_error="${GITHUB_WORKSPACE}/ce_error"
 ce_task_status="PENDING"
